@@ -8,15 +8,21 @@ permalink: /ai-news/
 	<h2><span>AI News</span></h2>
 </div>
 
-{% assign ai_posts = site.posts | where_exp: "post", "post.categories contains 'ai-news' or post.categories contains 'ai' or post.tags contains 'ai'" %}
-
-{% if ai_posts.size > 0 %}
-	{% for post in ai_posts %}
+{% assign found = false %}
+{% for post in site.posts %}
+	{% assign cats = post.categories | join: "," | downcase %}
+	{% assign tags = post.tags | join: "," | downcase %}
+	{% if cats contains 'ai-news' or cats contains 'ai' or tags contains 'ai' %}
+		{% unless found %}
+			{% assign found = true %}
+		{% endunless %}
 		<article class="list-item">
 			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 			<p>{{ post.excerpt }}</p>
 		</article>
-	{% endfor %}
-{% else %}
+	{% endif %}
+{% endfor %}
+
+{% unless found %}
 	<p>No AI posts yet—check back soon for the latest AI coverage.</p>
-{% endif %}
+{% endunless %}
