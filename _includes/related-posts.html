@@ -1,0 +1,34 @@
+{% assign related = "" | split: "," %}
+{% assign current_tags = page.tags | default: [] %}
+{% assign current_categories = page.categories | default: [] %}
+
+{% for p in site.posts %}
+  {% if p.url != page.url %}
+    {% assign score = 0 %}
+    {% for t in p.tags %}
+      {% if current_tags contains t %}
+        {% assign score = score | plus: 2 %}
+      {% endif %}
+    {% endfor %}
+    {% for c in p.categories %}
+      {% if current_categories contains c %}
+        {% assign score = score | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if score > 0 %}
+      {% assign related = related | push: p | uniq %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if related.size > 0 %}
+  <div class="related-posts section-title">
+    <h3>Related Articles</h3>
+    <ul>
+      {% assign sorted = related | sort: 'date' | reverse %}
+      {% for r in sorted limit:5 %}
+        <li><a href="{{ r.url }}">{{ r.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

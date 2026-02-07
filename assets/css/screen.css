@@ -16,6 +16,18 @@ License: https://www.wowthemes.net/freebies-license/
 
 /* Prefer applying Roboto globally */
 body { font-family: 'Roboto', sans-serif; }
+
+/* Button follow / follow styles */
+.btn-follow,
+.btn.follow,
+.follow {
+    background-color: #007BFF !important;
+    color: #ffffff !important;
+    border-color: #007BFF !important;
+}
+
+/* Make images responsive */
+img { max-width: 100%; height: auto; }
 .mainheading {
     padding: 1rem 0rem;
 }

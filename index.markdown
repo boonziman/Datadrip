@@ -4,9 +4,9 @@ permalink: /
 ---
 
 <!-- Hero Section -->
-<header class="hero">
-	<h1>DataDrip: Latest AI News 2026, Crypto Updates, and Tech Trends</h1>
-	<p>Your AI-powered aggregator for emerging tech insights. Stay ahead with daily summaries and analysis.</p>
+<header class="hero" style="background: #007BFF; color: white; padding: 50px; text-align: center;">
+	<h1>Welcome to DataDrip: Your Source for AI News Updates 2026</h1>
+	<p>Latest crypto, tech, and AI trends - SEO-optimized and AI-powered.</p>
 </header>
 
 <!-- Recent Articles -->
