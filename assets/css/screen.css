@@ -7,6 +7,15 @@ License: https://www.wowthemes.net/freebies-license/
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
 }
+.body-font {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-brand-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Prefer applying Roboto globally */
+body { font-family: 'Roboto', sans-serif; }
 .mainheading {
     padding: 1rem 0rem;
 }
@@ -303,6 +312,34 @@ span.post-read-more a:hover {
     max-height: 30px;
     margin-right: 5px;
 }
+
+/* Brand text for header when using text logo */
+.navbar-brand-text {
+    font-size: 24px;
+    color: #007BFF;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Homepage hero and recent posts */
+.hero {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.hero h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.hero p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 0;
+}
+.latest-posts { padding: 20px; }
+.latest-posts article { margin-bottom: 20px; }
 
 .mainheading h1.sitetitle {
     font-family: Righteous;

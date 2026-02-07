@@ -3,59 +3,29 @@ layout: default
 title: Home
 ---
 
-{% if page.url == "/" %}
+<!-- Hero Section -->
+<header class="hero">
+    <h1>DataDrip: Latest AI News 2026, Crypto Updates, and Tech Trends</h1>
+    <p>Your AI-powered aggregator for emerging tech insights. Stay ahead with daily summaries and analysis.</p>
+</header>
 
-<!-- Featured
-================================================== -->
-<section class="featured-posts">
+<!-- Recent Articles -->
+<section class="latest-posts">
     <div class="section-title">
-        <h2><span>Featured</span></h2>
+        <h2><span>Recent Articles</span></h2>
     </div>
-    <div class="row">
 
-    {% for post in site.posts %}
-
-        {% if post.featured == true %}
-
-            {% include featuredbox.html %}
-
-        {% endif %}
-
+    {% for post in site.posts limit:5 %}
+        <article class="list-item">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+        </article>
     {% endfor %}
 
-    </div>
+    {% if site.posts.size == 0 %}
+        <p>No posts yet—check back soon for the latest AI and crypto news!</p>
+    {% endif %}
+
 </section>
-
-{% endif %}
-
 <!-- Posts Index
-================================================== -->
-<section class="recent-posts">
-
-    <div class="section-title">
-
-        <h2><span>All Stories</span></h2>
-
-    </div>
-
-    <div class="row listrecent">
-
-        {% for post in paginator.posts %}
-
-        {% include postbox.html %}
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
-<!-- Pagination
-================================================== -->
-<div class="bottompagination">
-<div class="pointerup"><i class="fa fa-caret-up"></i></div>
-<span class="navigation" role="navigation">
-    {% include pagination.html %}
-</span>
-</div>
 

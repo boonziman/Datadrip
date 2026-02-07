@@ -1,6 +1,31 @@
+layout: default
+title: Home
+permalink: /
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
----
+<!-- Hero Section -->
+<header class="hero">
+	<h1>DataDrip: Latest AI News 2026, Crypto Updates, and Tech Trends</h1>
+	<p>Your AI-powered aggregator for emerging tech insights. Stay ahead with daily summaries and analysis.</p>
+</header>
+
+<!-- Recent Articles -->
+<section class="latest-posts">
+	<div class="section-title">
+		<h2><span>Recent Articles</span></h2>
+	</div>
+
+	{% for post in site.posts limit:5 %}
+		<article class="list-item">
+			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			<p>{{ post.excerpt }}</p>
+		</article>
+	{% endfor %}
+
+	{% if site.posts.size == 0 %}
+		<p>No posts yet—check back soon for the latest AI and crypto news!</p>
+	{% endif %}
+
+</section>
+
+<!-- Disabled to avoid generating a duplicate homepage. -->
