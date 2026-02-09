@@ -17,4 +17,5 @@ group :jekyll_plugins do
     gem 'jekyll-archives'
     gem 'kramdown'
     gem 'rouge'
+    # gem "jekyll-related-posts" # Disabled due to native extension errors on macOS ARM
 end

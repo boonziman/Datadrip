@@ -50,7 +50,7 @@ pre {
 
 .site-content {
     min-height: 60vh;
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
     margin-top: 57px;
     transition: all 0.4s;
 }
@@ -898,4 +898,13 @@ iframe {
 .lazyimg[data-srcset] {
     opacity: 0;
     transition: opacity .25s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-follow {
+    background-color: #007BFF;
+    color: #fff;
 }

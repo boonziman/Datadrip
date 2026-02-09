@@ -1,5 +1,5 @@
 # Site
-name: "Mediumish"
+name: "DataDrip"
 title: "DataDrip - AI, Crypto & Tech News"
 description: "Curated insights on AI news 2026, crypto trends, tech breakthroughs."
 logo: 'assets/images/logo.png'
@@ -38,6 +38,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  # - jekyll-related-posts # Disabled due to native extension errors on macOS ARM
     
 # Archives
 jekyll-archives:
@@ -70,3 +71,10 @@ adsense-data-ad-slot: "1363087678"
 lazyimages: "disabled"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+
+menu:
+  - {name: 'Home', url: '/'}
+  - {name: 'AI News', url: '/categories/ai'}
+  - {name: 'Crypto News', url: '/categories/crypto'}
+  - {name: 'Tech Trends', url: '/categories/tech'}
+  - {name: 'About', url: '/about'}

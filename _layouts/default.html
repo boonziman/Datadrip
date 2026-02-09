@@ -16,6 +16,8 @@
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
+<link href="{{ site.baseurl }}/assets/css/mediumish.css" rel="stylesheet">
+
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
 </head>
@@ -48,9 +50,7 @@ ga('send', 'pageview');
     <div class="container pr-0">
 
     <!-- Begin Logo -->
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-    </a>
+    <a class="navbar-brand logo" href="{{ site.baseurl }}/"><h1>DataDrip</h1></a>
     <!-- End Logo -->
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,38 +62,13 @@ ga('send', 'pageview');
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
-
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
-                </li>
-
-                {% include search-lunr.html %}
-
-            </ul>
+  {% for item in site.menu %}
+    <li class="nav-item{% if page.url == item.url %} active{% endif %}">
+      <a class="nav-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.name }}</a>
+    </li>
+  {% endfor %}
+  {% include search-lunr.html %}
+</ul>
 
         <!-- End Menu -->
 
@@ -122,6 +97,11 @@ ga('send', 'pageview');
 <div class="main-content">
     {{ content }}
 </div>
+
+<!-- Move ad placeholder to bottom -->
+<aside>
+  <div class="ad-slot" style="background: #f0f0f0; padding: 10px; margin: 10px 0;">Future Ad or Affiliate Here</div>
+</aside>
 
 {% if site.mailchimp-list %}
 <!-- Bottom Alert Bar
