@@ -3,3 +3,8 @@ _site
 *.swp
 .sass-cache
 *~
+.venv/
+venv/
+secrets.py
+cache.json
+__pycache__/
