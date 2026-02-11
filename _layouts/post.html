@@ -119,7 +119,16 @@ post_class: post-template
                 </ul>
             </div>
             <!-- End Tags -->
-
+            <div class="related-posts">
+                <h3>You Might Also Like</h3>
+                <ul>
+                    {% for post in site.related_posts limit:3 %}
+                    <li>
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
             {% if page.previous.url %}

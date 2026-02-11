@@ -1,7 +1,7 @@
 # Site
 name: "DataDrip"
 title: "DataDrip - AI, Crypto & Tech News"
-description: "Curated insights on AI news 2026, crypto trends, tech breakthroughs."
+description: "Daily insights on the latest AI breakthroughs, crypto trends, and emerging tech in 2026."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /datadrip
@@ -78,3 +78,5 @@ menu:
   - {name: 'Crypto News', url: '/categories/crypto'}
   - {name: 'Tech Trends', url: '/categories/tech'}
   - {name: 'About', url: '/about'}
+  - {name: 'Privacy', url: '/privacy'}
+  - {name: 'Disclaimer', url: '/disclaimer'}

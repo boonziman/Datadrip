@@ -1,0 +1,35 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.related-posts {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.related-posts h3 {
+  margin-bottom: 15px;
+}
+
+.related-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.related-posts li {
+  margin-bottom: 10px;
+}
